@@ -13,3 +13,8 @@ eq_location_clean(data)
 \code{eq_location_clean} function strips out country name and
 converts column names to title case for readability.
 }
+\examples{
+\dontrun{
+earthquakes <- eq_location_clean(noaa_data)
+}
+}

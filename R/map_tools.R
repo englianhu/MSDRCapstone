@@ -22,17 +22,16 @@
 #'   annotation in the \code{earthquakes} data frame.
 #'
 #' @return Returns an interactive \code{leaflet} map.
-#' @export
 #'
 #' @importFrom dplyr filter mutate
 #' @importFrom lubridate year
 #' @importFrom leaflet leaflet addTiles addCircleMarkers
 #' @importFrom magrittr %>%
 #'
-#'
+#' @export
 #' @examples
 #'
-#' ## use "Date_ymd" as annotation
+#' ## Using "Date_ymd" column as annotation
 #' \dontrun{
 #' earthquakes <- earthquakes %>%
 #'    dplyr::filter(Country == 'China') %>%

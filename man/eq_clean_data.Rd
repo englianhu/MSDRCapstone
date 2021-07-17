@@ -13,3 +13,8 @@ eq_clean_data(data)
 \code{eq_clean_data} Prepares earthquakes data for plotting; consolidates date records
              into a single record (year-month-date format).
 }
+\examples{
+\dontrun{
+earthquakes <- eq_clean_data(earthquakes)
+}
+}

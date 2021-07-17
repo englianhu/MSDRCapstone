@@ -23,6 +23,10 @@
 #'
 #' @export
 #'
+#' @examples
+#' \dontrun{
+#' earthquakes <- eq_location_clean(noaa_data)
+#' }
 ## Function strips out country name and converts names to title case
 ## Takes a character vector as input
 eq_location_clean <- function (data) {
@@ -56,6 +60,10 @@ eq_location_clean <- function (data) {
 #' @importFrom tidyselect everything
 #'
 #' @export
+#' @examples
+#' \dontrun{
+#' earthquakes <- eq_clean_data(earthquakes)
+#' }
 
 eq_clean_data <- function(data) {
 
@@ -80,7 +88,6 @@ eq_clean_data <- function(data) {
   return(data)
 }
 
-# noaa_data_location_clean <- eq_location_clean(noaa_data)
 
 # earthquakes <- eq_clean_data(noaa_data_location_clean)
 

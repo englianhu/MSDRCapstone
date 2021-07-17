@@ -33,7 +33,7 @@ shows the annotation as specified by the \code{annot_col} variable.
 }
 \examples{
 
-## use "Date_ymd" as annotation
+## Using "Date_ymd" column as annotation
 \dontrun{
 earthquakes <- earthquakes \%>\%
    dplyr::filter(Country == 'China') \%>\%

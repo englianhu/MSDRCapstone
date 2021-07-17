@@ -2,7 +2,7 @@
 % Please edit documentation in R/geom_timeline_label.R
 \name{geom_timeline_label}
 \alias{geom_timeline_label}
-\title{Generate annotations for points on map of earthquake data.}
+\title{Generate annotations for points on map of earthquake data}
 \usage{
 geom_timeline_label(
   mapping = NULL,
@@ -41,5 +41,5 @@ combining them.}
 \code{geom_timeline_label()} adds annotations to the earthquake data.
 The geom adds a vertical line to each data point with text annotation providing
 the location of the earthquake. This is a function that builds a layer, based
- on geom specification. It takes the geom definition and the coordinate data together.
+ on a \code{Geom} specification. It takes the geom definition and the coordinate data together.
 }
