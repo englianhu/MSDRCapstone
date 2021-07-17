@@ -1,0 +1,1 @@
+utils::globalVariables(c("Year", "Sec", "Date_ymd", "Mag"))

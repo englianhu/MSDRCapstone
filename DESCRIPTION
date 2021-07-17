@@ -1,0 +1,18 @@
+Package: MSDRCapstone
+Type: Package
+Title: Interactive Earthquate Map and Related Data
+Version: 0.1.0
+Author: M.A. Sondergard
+Maintainer: M.A. Sondergard <murray.sondergard@gmail.com>
+Description: Inteactive earthquake map created for capstone project in Coursera
+    Mastering Software Development with R specialization.  The functions take data
+    from the NOAA Earthquake database for earthquakes occuring worldwide since the
+    year 2000, and allow the user to generate plots by time or location with relevant
+    details about specific earthquake events.
+License: GPL-3
+Encoding: UTF-8
+RoxygenNote: 7.1.1
+LazyData: true
+Imports: dplyr, ggplot2, lubridate, stringr, tidyr, leaflet, grid, tidyselect, magrittr
+Depends: 
+    R (>= 2.10)
