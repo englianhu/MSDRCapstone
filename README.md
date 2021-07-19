@@ -5,9 +5,9 @@
 
 ## Create an Example Package in R
 
-Package: FARSpkg
+Package: MSDRCapstone
 
-GitHub: <https://github.com/SondergardM/FARSpkg>
+GitHub: <https://github.com/SondergardM/MSDRCapstone>
 
 ## Data Source
 
@@ -38,14 +38,6 @@ The package consists of five (5) functions:
 -   **fars\_read\_years** This function reads in the FARS data for a
     range of years (2003 - 2015)
 
--   **fars\_summarize\_years** This function produces a summary of the
-    number of fatal traffic accidents per month for the specific year of
-    interest.
-
--   **fars\_map\_state** This function generates a map showing the
-    location of fatal traffic accidents for a given state and year, as
-    requested by the user.
-
 Further documentation can be found in the package documentation for each
 individual function.
 
@@ -63,9 +55,3 @@ individual function.
 -   [Testing packages](http://r-pkgs.had.co.nz/tests.html)
 
 ## Travis badge
-
-<!-- badges: start -->
-
-[![Travis build
-status](https://travis-ci.com/SondergardM/FARSpkg.svg?branch=main)](https://travis-ci.com/SondergardM/FARSpkg)
-<!-- badges: end -->
