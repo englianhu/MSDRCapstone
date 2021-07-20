@@ -18,3 +18,7 @@ Imports: dplyr, ggplot2, lubridate, stringr, tidyr, leaflet, grid, tidyselect,
 Depends: 
     R (>= 2.10)
 Config/testthat/edition: 3
+Suggests: 
+    rmarkdown,
+    knitr
+VignetteBuilder: knitr
