@@ -45,26 +45,89 @@ given earthquake location.
 The package consists of six (6) functions:
 
 * **eq_location_clean()** - Function strips out country name for data downloaded from 
-the NOAA earthquake database and converts the column names to title case for readability.
+ the NOAA earthquake database and converts the column names to title case for readability.
+
+    Example: 
+    
+```{r eval = FALSE}
+      earthquakes <- eq_location_clean(noaa_data)
+```      
 
 * **eq_clean_data()** - Function combines Year, Month and Day fields into a single date variable
-and prepares the data for use in plots.
+ and prepares the data for use in plots.
+
+    Example: 
+ 
+```{r eval = FALSE} 
+      earthquakes <- eq_clean_data(earthquakes)
+```
 
 * **geom_timeline()** - Function plots a time line for earthquakes ranging from "xmin" to "xmax"
  dates, with a point for each earthquake.  The x aesthetic is a date and the y aesthetic is a
  factor indicating some stratification, in which case multiple time lines will be plotted for
  each level of the factor (e.g. country).
-
+ 
+    Example:
+```{r eval = FALSE}
+ 
+      earthquakes %>% dplyr::filter(Country %in% c("Afghanistan")) %>%  
+                dplyr::filter(Date_ymd > "2000-01-01") %>%  
+                ggplot() +  
+                      geom_timeline(aes(x = Date_ymd,  
+                                        y = Country,  
+                                        colour = Total_Deaths,  
+                                        size = EQ_Primary)) +  
+                      scale_size_continuous(name = "Richter Scale Magnitude") +  
+                      scale_colour_continuous(name = "Total Deaths",  
+                                              type = "viridis") +  
+                      theme_light() +  
+                      xlab("Year")  
+```
+  
 * **geom_timeline_label()** - Function adds annotations to the earthquake data provided by the
  geom_timeline() function.  The geom adds a vertical line to each data point with a text annotation
  providing the location of the earthquake. The x aesthetic is a date of the earthquake and a label
  which takes the column name from which annotations will be obtained.
-
+ 
+  Example:
+  
+```{r eval = FALSE}
+      earthquakes %>%  
+        dplyr::filter(Country %in% c("China", "New Zealand")) %>%  
+        dplyr::filter(Date_ymd > "2000-01-01") %>%  
+        dplyr::select(Date_ymd, Country, Location_Name, Latitude,  
+                 Longitude, EQ_Primary, Total_Deaths) %>%  
+        drop_na(Location_Name) %>%  
+        ggplot() +  
+          geom_timeline(aes(x = Date_ymd,  
+                            y = Country,  
+                            colour = Total_Deaths,  
+                            size = EQ_Primary)) +  
+          geom_timeline_label(aes(x = Date_ymd,  
+                                  magnitude = EQ_Primary,  
+                                  label = Location_Name,  
+                                  y = Country,  
+                                  n_max = 5)) +  
+        scale_size_continuous(name = "Richter Scale Magnitude") +  
+        scale_colour_continuous(name = "Total Deaths", type = "viridis") +  
+        theme_light() +  
+        xlab("Year")
+```
+  
 * **eq_map()** - Function creates an interactive map showing the location of earthquakes in the given
  earthquakes data set.  The size of the circles in the map are proportional to the magnitude of
  the earthquakes. The map is interactive, and when you click on a link, a popup label shows the
  annotation as specified by the **annot_col** variable.
-
+ 
+  Example:
+ 
+```{r eval = FALSE} 
+      earthquakes <- earthquakes %>%  
+                      dplyr::filter(Country == 'China') %>%  
+                      dplyr::filter(lubridate::year(Date_ymd) >= 2000)  
+      eq_map(earthquakes, annot_col = 'Date_ymd')  
+```
+  
 * **eq_create_label()** - Function creates a more descriptive and HTML-formatted popup
  label to be used with the **eq_map()** function. This function creates a vector of HTML-formatted
  labels using supplied data from the eathquakes data set.  The label contains the following
@@ -75,5 +138,15 @@ and prepares the data for use in plots.
     * Earthquake magnitude (Richter scale)
     * Total Deaths caused by the event
 
+  Example:
+  
+```{r eval = FALSE}
+      earthquakes <- earthquakes %>%  
+                   dplyr::filter(Country == 'China') %>%  
+                   dplyr::filter(lubridate::year(Date_ymd) >= 2000) %>%  
+                   dplyr::mutate(Popup_Text = eq_create_label(.))  
+      eq_map(earthquakes, annot_col = "Popup_Text")  
+```
+   
 Further documentation can be found in the package documentation for each individual
 function.
