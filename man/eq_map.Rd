@@ -27,7 +27,7 @@ showing the location of earthquakes in the given \code{earthquakes} data set.
 
 This function shows an interactive map of the location of the earthquakes in
 the given \code{earthquakes} data.  The size of the circles are
-proportional to the nitude of the earthquakes (in the \code{EQ_PRIMARY})
+proportional to the magnitude of the earthquakes (in the \code{EQ_PRIMARY})
 variable. The map is interactive, and when you click on a link, the popup
 shows the annotation as specified by the \code{annot_col} variable.
 }
