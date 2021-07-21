@@ -50,8 +50,11 @@ eq_location_clean <- function (data) {
 
 #' @title Data Preparation for Plotting
 #'
-#' @description \code{eq_clean_data} Prepares earthquakes data for plotting; consolidates date records
-#'              into a single record (year-month-date format).
+#' @description \code{eq_clean_data} Prepares earthquakes data for plotting; consolidates
+#'              date records into a single record (year-month-day format) and removes
+#'              columns with separate Year, Month and Day values.  Also changes variable
+#'              names with spaces to single names with text joined by an underscore (_)
+#'              character.
 #'
 #' @param data Earthquakes data set from NOAA database.
 #'
