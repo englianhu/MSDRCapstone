@@ -23,7 +23,7 @@
 #   dplyr::select(Date_ymd, Country, Location_Name, Latitude,
 #                 Longitude, EQ_Primary, Total_Deaths
 #   ) %>%
-#   drop_na(Location_Name
+#   tidyr::drop_na(Location_Name
 #   ) %>%
 #   ggplot() +
 #   geom_timeline(aes(x = Date_ymd,
