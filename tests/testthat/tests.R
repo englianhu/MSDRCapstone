@@ -20,18 +20,18 @@ test_that("Eq_map() function produces a leaflet object",
 test_that("geom_timeline() and geom_timeline_label() functions generate a ggplot
           object",
           {
-            test_plot <- noaa_data |>
-                         eq_location_clean() |>
-                         eq_clean_data() |>
+            test_plot <- noaa_data %>%
+                         eq_location_clean() %>%
+                         eq_clean_data() %>%
                          dplyr::filter(Country %in% c("China", "New Zealand")
-                         ) |>
+                         ) %>%
                          dplyr::filter(Date_ymd > "2000-01-01"
-                         ) |>
+                         ) %>%
                          dplyr::select(Date_ymd, Country, Location_Name, Latitude,
                                        Longitude, EQ_Primary, Total_Deaths
-                         ) |>
+                         ) %>%
                          tidyr::drop_na(Location_Name
-                         ) |>
+                         ) %>%
             ggplot() +
                 geom_timeline(aes(x = Date_ymd,
                                   y = Country,
