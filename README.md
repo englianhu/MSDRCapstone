@@ -8,6 +8,13 @@ Development with R Specialization.
 
 GitHub: <https://github.com/SondergardM/MSDRCapstone>
 
+## Travis badge
+
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/SondergardM/MSDRCapstone/workflows/R-CMD-check/badge.svg)](https://github.com/SondergardM/MSDRCapstone/actions)
+<!-- badges: end -->
+
 ## Data Source
 
 The functions in this R package utilize data from the US National
@@ -84,10 +91,3 @@ individual function.
 -   [Testing packages](http://r-pkgs.had.co.nz/tests.html)
 -   [Travis: Building R
     packages](https://docs.travis-ci.com/user/languages/r/)
-
-## Travis badge
-
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/SondergardM/MSDRCapstone/workflows/R-CMD-check/badge.svg)](https://github.com/SondergardM/MSDRCapstone/actions)
-<!-- badges: end -->
