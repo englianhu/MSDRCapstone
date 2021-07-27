@@ -86,6 +86,8 @@ individual function.
     packages](https://docs.travis-ci.com/user/languages/r/)
 
 ## Travis badge
+
 <!-- badges: start -->
-  [![R-CMD-check](https://github.com/SondergardM/MSDRCapstone/workflows/R-CMD-check/badge.svg)](https://github.com/SondergardM/MSDRCapstone/actions)
-  <!-- badges: end -->
+
+[![R-CMD-check](https://github.com/SondergardM/MSDRCapstone/workflows/R-CMD-check/badge.svg)](https://github.com/SondergardM/MSDRCapstone/actions)
+<!-- badges: end -->
