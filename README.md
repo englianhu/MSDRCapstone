@@ -11,8 +11,7 @@ GitHub: <https://github.com/SondergardM/MSDRCapstone>
 ## Travis badge
 
 <!-- badges: start -->
-
-[![R-CMD-check](https://github.com/englianhu/MSDRCapstone/workflows/R-CMD-check/badge.svg)](https://github.com/englianhu/MSDRCapstone/actions)
+[![R-CMD-check](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-CMD-check.yml/badge.svg)](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-CMD-check.yml)
 
 macOS: [![R](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-macos.yml/badge.svg)](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-macos.yml) Ubuntu: [![R](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-ubuntu.yml/badge.svg)](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-ubuntu.yml)
 <!-- badges: end -->
