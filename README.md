@@ -12,9 +12,9 @@ GitHub: <https://github.com/SondergardM/MSDRCapstone>
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/SondergardM/MSDRCapstone/workflows/R-CMD-check/badge.svg)](https://github.com/SondergardM/MSDRCapstone/actions)
+[![R-CMD-check](https://github.com/englianhu/MSDRCapstone/workflows/R-CMD-check/badge.svg)](https://github.com/SondergardM/MSDRCapstone/actions)
 
-macOS: [![R](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-macos.yaml/badge.svg)](https://github.com/MSDRCapstone/farsdata/actions/workflows/R-macos.yaml) Ubuntu: [![R](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-ubuntu.yaml/badge.svg)](https://github.com/MSDRCapstone/farsdata/actions/workflows/R-ubuntu.yaml)
+macOS: [![R](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-macos.yml/badge.svg)](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-macos.yml) Ubuntu: [![R](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-ubuntu.yml/badge.svg)](https://github.com/englianhu/MSDRCapstone/actions/workflows/R-ubuntu.yml)
 <!-- badges: end -->
 
 ## Data Source
